@@ -28,9 +28,9 @@ button {
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Ubuntu, sans-serif;
-  min-width: 1440px;
-  height: 900px;
-  /* overflow: hidden; */
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
   text-rendering: optimizeSpeed;
 }
 

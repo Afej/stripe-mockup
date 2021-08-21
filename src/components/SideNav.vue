@@ -268,9 +268,11 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   padding: 12px 20px 0px;
-  position: static;
-  min-width: 270px;
+  position: fixed;
+  width: 270px;
   height: 900px;
+  left: 0px;
+  top: 0px;
   background: #f7fafc;
   box-shadow: inset -1px 0px 0px #e3e8ee;
 }
@@ -334,14 +336,14 @@ nav ul.main-nav li#home {
 
 nav ul.main-nav li#dropdown {
   font-weight: 600;
-  color: #5469D4;
+  color: #5469d4;
 }
 
-nav ul.main-nav li#dropdown ul.dropdown-nav{
+nav ul.main-nav li#dropdown ul.dropdown-nav {
   margin-bottom: 24px;
 }
 
-nav ul.main-nav li#dropdown ul.dropdown-nav li{
+nav ul.main-nav li#dropdown ul.dropdown-nav li {
   margin-left: 30px;
 }
 

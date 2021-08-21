@@ -366,7 +366,8 @@ export default {
   align-items: flex-start;
   padding: 0px;
   min-width: 1440px;
-  height: 900px;
+  width: 100vw;
+  height: 100vh;
   background: #ffffff;
 }
 
