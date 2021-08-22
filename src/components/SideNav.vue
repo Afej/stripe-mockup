@@ -247,8 +247,8 @@ export default {
   top: 0px;
   left: 0px;
   padding: 12px 20px 0px;
-  min-width: 270px;
-  height: 900px;
+  /* min-width: 270px; */
+  height: 100vh;
   background: #f7fafc;
   box-shadow: inset -1px 0px 0px #e3e8ee;
 }
@@ -395,14 +395,10 @@ input:checked + .slider:before {
 }
 
 /* media queries */
-@media screen and (max-width: 1280px) and (min-width: 1024px) {
-  /* .sidenav {
-    min-width: 208px;
-    height: 900px;
-  } */
-}
-
 @media screen and (max-width: 768px) {
+  .sidenav{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 540px) {

@@ -58,4 +58,9 @@ th.description {
   padding-left: 40px;
 }
 
+@media screen and (max-width: 540px) {
+  th.description {
+    padding-left: 0px;
+  }
+}
 </style>

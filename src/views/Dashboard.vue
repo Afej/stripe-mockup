@@ -2,94 +2,6 @@
   <div class="dashboard">
     <SideNav />
     <div class="main-content">
-      <!-- <svg
-        class="checkbox"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g filter="url(#filter0_ddd)">
-          <rect x="5" y="3" width="14" height="14" rx="4" fill="white" />
-        </g>
-        <defs>
-          <filter
-            id="filter0_ddd"
-            x="0"
-            y="0"
-            width="24"
-            height="24"
-            filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
-          >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-            <feColorMatrix
-              in="SourceAlpha"
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy="1" />
-            <feGaussianBlur stdDeviation="0.5" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow"
-            />
-            <feColorMatrix
-              in="SourceAlpha"
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feMorphology
-              radius="1"
-              operator="dilate"
-              in="SourceAlpha"
-              result="effect2_dropShadow"
-            />
-            <feOffset />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0.235294 0 0 0 0 0.258824 0 0 0 0 0.341176 0 0 0 0.16 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="effect1_dropShadow"
-              result="effect2_dropShadow"
-            />
-            <feColorMatrix
-              in="SourceAlpha"
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy="2" />
-            <feGaussianBlur stdDeviation="2.5" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0.235294 0 0 0 0 0.258824 0 0 0 0 0.341176 0 0 0 0.08 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="effect2_dropShadow"
-              result="effect3_dropShadow"
-            />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="effect3_dropShadow"
-              result="shape"
-            />
-          </filter>
-        </defs>
-      </svg> -->
-
       <Header />
       <section class="payments">
         <div class="payments-header">
@@ -378,8 +290,8 @@ export default {
   padding: 0px;
   /* min-width: 1156px; */
   width: 100%;
-  margin-left: 270px;
-  height: 873px;
+  margin-left: 250px;
+  /* height: 873px; */
 }
 
 .main-content svg.checkbox {
@@ -469,7 +381,7 @@ button.bg-blue {
 
 .payments-table {
   width: 100%;
-  overflow: auto;
+  overflow-x: auto;
 }
 
 .payments-footer {
@@ -511,12 +423,25 @@ button.bg-blue {
 }
 
 /* media queries */
-@media screen and (max-width: 1280px) and (min-width: 1024px) {
-}
-
 @media screen and (max-width: 768px) {
+  .main-content {
+    margin-left: 0px;
+  }
+
+  .payments {
+    padding: 0px 20px;
+  }
 }
 
 @media screen and (max-width: 540px) {
+  .payments-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+  }
+
+  .payments-buttons{
+    margin-top: 12px;
+  }
 }
 </style>

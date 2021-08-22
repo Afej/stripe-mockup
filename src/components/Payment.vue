@@ -75,7 +75,7 @@ td {
   position: relative;
 }
 
-.more-icon svg{
+.more-icon svg {
   cursor: pointer;
 }
 
@@ -112,5 +112,37 @@ td {
   font-size: 14px;
   line-height: 17px;
   color: #3c4257;
+}
+
+/* media queries */
+@media screen and (max-width: 768px) {
+  .amount {
+    left: -5px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  td {
+    padding: 10px 5px;
+  }
+  
+  .amount {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .description {
+    display: flex;
+    align-items: center;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .label-btn {
+    display: none;
+  }
 }
 </style>
