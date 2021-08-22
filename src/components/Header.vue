@@ -90,8 +90,11 @@ export default {
 
 <style scoped>
 header {
+  /* sticky header considerations */
+  /* position: sticky;
+  top: 0; */
   display: flex;
-  /* min-width: 1156px; */
+  min-width: 1156px;
   width: 100%;
   justify-content: space-between;
   align-items: center;

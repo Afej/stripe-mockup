@@ -207,32 +207,11 @@
           Developers
         </li>
         <li class="secondary-nav-item">
-          <svg
-            width="26"
-            height="17"
-            viewBox="0 0 26 17"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              x="0.5"
-              y="1"
-              width="25"
-              height="15"
-              rx="7.5"
-              fill="#E3E8EE"
-              stroke="#D9DCE1"
-            />
-            <rect
-              x="0.5"
-              y="1"
-              width="15"
-              height="15"
-              rx="7.5"
-              fill="white"
-              stroke="#C2C7CF"
-            /></svg
-          >View test data
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          View test data
         </li>
         <li class="secondary-nav-item">
           <svg
@@ -264,15 +243,12 @@ export default {
 
 <style scoped>
 .sidenav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 12px 20px 0px;
   position: fixed;
-  width: 270px;
-  height: 900px;
-  left: 0px;
   top: 0px;
+  left: 0px;
+  padding: 12px 20px 0px;
+  min-width: 270px;
+  height: 900px;
   background: #f7fafc;
   box-shadow: inset -1px 0px 0px #e3e8ee;
 }
@@ -328,6 +304,8 @@ ul.secondary-nav li {
   line-height: 17px;
   color: #1a1f36;
   margin: 12px 0px;
+  display: flex;
+  align-items: center;
 }
 
 nav ul.main-nav li#home {
@@ -337,6 +315,7 @@ nav ul.main-nav li#home {
 nav ul.main-nav li#dropdown {
   font-weight: 600;
   color: #5469d4;
+  display: block;
 }
 
 nav ul.main-nav li#dropdown ul.dropdown-nav {
@@ -349,5 +328,83 @@ nav ul.main-nav li#dropdown ul.dropdown-nav li {
 
 nav ul.secondary-nav {
   margin: 28px 0px;
+}
+
+/* custom toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 26px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 0px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #635cff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #635cff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 26px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* media queries */
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
+  /* .sidenav {
+    min-width: 208px;
+    height: 900px;
+  } */
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 540px) {
 }
 </style>

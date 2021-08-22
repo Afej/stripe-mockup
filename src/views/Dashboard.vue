@@ -1,8 +1,8 @@
 <template>
   <div class="dashboard">
     <SideNav />
-    <main class="main-content">
-      <svg
+    <div class="main-content">
+      <!-- <svg
         class="checkbox"
         width="24"
         height="24"
@@ -88,7 +88,7 @@
             />
           </filter>
         </defs>
-      </svg>
+      </svg> -->
 
       <Header />
       <section class="payments">
@@ -163,14 +163,16 @@
         </div>
 
         <footer class="payments-footer">
-          <p class="footer-results"><span>{{payments.length}}</span> Results</p>
+          <p class="footer-results">
+            <span>{{ payments.length }}</span> Results
+          </p>
           <div class="footer-buttons">
             <button class="prev">Previous</button>
             <button class="next">Next</button>
           </div>
         </footer>
       </section>
-    </main>
+    </div>
   </div>
 </template>
 
@@ -360,26 +362,23 @@ export default {
 
 <style scoped>
 .dashboard {
-  position: relative;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
-  min-width: 1440px;
   width: 100vw;
   height: 100vh;
   background: #ffffff;
 }
 
 .main-content {
-  position: static;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  min-width: 1156px;
+  /* min-width: 1156px; */
   width: 100%;
-  margin-right: 14px;
+  margin-left: 270px;
   height: 873px;
 }
 
@@ -393,8 +392,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px 0px 0px 40px;
-  min-width: 1156px;
+  padding: 0px 40px;
+  /* min-width: 1156px; */
   margin: 32px 0px;
   width: 100%;
 }
@@ -509,5 +508,15 @@ button.bg-blue {
 .footer-buttons button.next {
   color: #000;
   font-weight: bold;
+}
+
+/* media queries */
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 540px) {
 }
 </style>

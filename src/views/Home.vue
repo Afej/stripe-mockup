@@ -170,11 +170,7 @@
           </div>
 
           <div class="form-input">
-            <input type="checkbox" name="staySignedIn" />
-            <label for="checkbox">
-              <span class="indicator"></span>
-              <p class="label-text">Stay signed in for a week</p>
-            </label>
+            <CustomCheckbox text="Stay signed in for a week" />
           </div>
 
           <router-link to="/dashboard" class="form-button">
@@ -220,8 +216,13 @@
 </template>
 
 <script>
+import CustomCheckbox from "@/components/CustomCheckbox";
+
 export default {
   name: "Home",
+  components: {
+    CustomCheckbox,
+  },
 };
 </script>
 
@@ -407,54 +408,6 @@ form {
   border-radius: 5px;
   margin: 12px 0px;
   padding: 13.5px 12px 13.5px 16px;
-}
-
-/* custom checkbox */
-input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-
-input[type="checkbox"] + label {
-  position: relative;
-  padding-left: 24px;
-}
-
-input[type="checkbox"] + label .indicator {
-  position: absolute;
-  left: -4px;
-  display: block;
-  width: 16px;
-  height: 16px;
-  background: #fff;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  cursor: pointer;
-}
-
-input[type="checkbox"]:checked + label .indicator {
-  background: #a123cb;
-}
-
-input[type="checkbox"] + label .indicator:hover {
-  background: #ccc;
-}
-
-input[type="checkbox"]:focus + label .indicator {
-  box-shadow: 0px 0px 1px 3px #ca2bff;
-}
-
-input[type="checkbox"]:checked + label .indicator::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 16px;
-  border: 4px solid red;
-  border-left: none;
-  border-top: none;
-  transform: rotate(45deg);
-  left: 6px;
 }
 
 .form-button {
